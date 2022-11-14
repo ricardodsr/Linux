@@ -16,4 +16,4 @@
 # Downloads
         https://www.linux.org/pages/download/
 
-#Todas as informações contidas neste repositorio sao para DEBIAN
+# Todas as informações contidas neste repositorio sao para DEBIAN
