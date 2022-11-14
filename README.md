@@ -5,13 +5,10 @@
 
 # Principais distribuições
 
-        Debian;
-        Linux Mint;
-        Fedora (ligada à Red Hat);
-        Arch Linux;
-        Kali;
-        CentOS (com foco em servidores);
-        Slackware;
+        Debian          (Server/User)              Fedora (ligada à Red Hat);
+        Linux Mint      (User)                     CentOS (com foco em servidores);
+        Arch Linux      (User)                     Kali (Ethical-Hacking)
+        Slackware       (User)
 
 # Downloads
         https://www.linux.org/pages/download/
