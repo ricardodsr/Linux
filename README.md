@@ -13,4 +13,4 @@
 # Downloads
         https://www.linux.org/pages/download/
 
-# Todas as informações contidas nas pastas deste repositorio sao para utilizacao em  DEBIAN
+# Todas as informações contidas nas pastas deste repositório são para utilizacao em  DEBIAN
