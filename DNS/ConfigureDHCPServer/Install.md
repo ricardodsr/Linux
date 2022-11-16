@@ -7,26 +7,26 @@
         root@dlp:~# vi /etc/default/isc-dhcp-server
 
 
-        # line 4: uncomment
+# line 4: uncomment
         DHCPDv4_CONF=/etc/dhcp/dhcpd.conf
 
-        # line 17,18: specify interface to listen (replace the IF name to your environment)
+# line 17,18: specify interface to listen (replace the IF name to your environment)
         # if not use IPv6, comment out the line
         INTERFACESv4="ens2"
         INTERFACESv6="ens2"
 
         root@dlp:~# vi /etc/dhcp/dhcpd.conf
 
-        # line 7: specify domain name
+# line 7: specify domain name
         option domain-name "srv.world";
 
-        # line 8: specify nameserver's hostname or IP address
+# line 8: specify nameserver's hostname or IP address
         option domain-name-servers dlp.srv.world;
 
-        # line 21: uncomment
+# line 21: uncomment
         authoritative;
 
-        # add to the end
+# add to the end
         # specify network address and subnet-mask
         subnet 10.0.0.0 netmask 255.255.255.0 {
             # specify default gateway

@@ -16,8 +16,8 @@
 
         root@dlp:~# vi /etc/bind/named.conf.internal-zones
 
-        # create new
-        # define for internal section
+# create new
+# define for internal section
         view "internal" {
                 match-clients {
                         localhost;
@@ -40,8 +40,8 @@
 
         root@dlp:~# vi /etc/bind/named.conf.external-zones
 
-        # create new
-        # define for external section
+# create new
+# define for external section
         view "external" {
                 match-clients { any; };
                 # allow any query

@@ -22,7 +22,7 @@
         debian@www:~$ mkdir ~/.ssh
         debian@www:~$ chmod 700 ~/.ssh
         
-        # copy the secret key to the local ssh directory
+# copy the secret key to the local ssh directory
         debian@www:~$ scp debian@10.0.0.30:/home/debian/.ssh/id_rsa ~/.ssh/
         debian@10.0.0.30's password:
         id_rsa
@@ -36,7 +36,7 @@
 
         root@dlp:~# vi /etc/ssh/sshd_config
         
-        # line 56: uncomment and change to [no]
+# line 56: uncomment and change to [no]
         PasswordAuthentication no
         
         root@dlp:~# systemctl restart ssh

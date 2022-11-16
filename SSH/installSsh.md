@@ -6,7 +6,7 @@
 
             root@dlp:~# vi /etc/ssh/sshd_config
 
-            # line 32: uncomment and change to no
+# line 32: uncomment and change to no
             PermitRootLogin no
             
             root@dlp:~# systemctl restart ssh

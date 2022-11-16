@@ -12,7 +12,7 @@
 
         root@www:~# vi /etc/php/7.3/apache2/php.ini
         
-        # line 960: uncomment and add your timezone
+# line 960: uncomment and add your timezone
         date.timezone = "Asia/Tokyo"
         
         root@www:~# systemctl restart apache2

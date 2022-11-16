@@ -80,13 +80,13 @@
         suspend the virtual machine. In either case, to restart it again,
         simply run `vagrant up`.
 
-        # connect to virtual machine with SSH
+# connect to virtual machine with SSH
         root@dlp:~# vagrant ssh
         vagrant@debian10:~$
 
         vagrant@debian10:~$ exit 
 
-        # stop virtual machine
+# stop virtual machine
         root@dlp:~# vagrant halt
         ==> default: Attempting graceful shutdown of VM...
 
