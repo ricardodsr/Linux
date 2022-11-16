@@ -10,13 +10,13 @@
 
         root@dlp:~# visudo
         
-        # add to the end : user [buster] can use all root privilege
-        # how to write ⇒ destination host=(owner) command
+# add to the end : user [buster] can use all root privilege
+# how to write ⇒ destination host=(owner) command
         buster    ALL=(ALL:ALL) ALL
 
-        # push [Ctrl + x] key to quit visudo
+# push [Ctrl + x] key to quit visudo
         
-        # verify with user [buster]
+# verify with user [buster]
         buster@dlp:~$ /usr/sbin/reboot
         Failed to set wall message, ignoring: The name org.freedesktop.PolicyKit1 was not provided by any .service files
         Failed to reboot system via logind: The name org.freedesktop.PolicyKit1 was not provided by any .service files
@@ -39,32 +39,32 @@
 
 # mais algums comomdos que nao sao permitidos
 
-        # add aliase for the kind of shutdown commands
-        # Cmnd alias specification
+# add aliase for the kind of shutdown commands
+# Cmnd alias specification
         Cmnd_Alias SHUTDOWN = /usr/sbin/halt, /usr/sbin/shutdown, \
         /usr/sbin/poweroff, /usr/sbin/reboot, /usr/sbin/init, /usr/bin/systemctl 
 
-        # add ( commands in aliase [SHUTDOWN] are not allowed )
+# add ( commands in aliase [SHUTDOWN] are not allowed )
         buster    ALL=(ALL:ALL) ALL, !SHUTDOWN
 
-        # verify with user [buster]
+# verify with user [buster]
         buster@dlp:~$ sudo /usr/sbin/reboot
         [sudo] password for buster:
         Sorry, user buster is not allowed to execute '/usr/sbin/reboot' as root on dlp.srv.world.   # denied
 
 # Transferir algums comandos com privilerios root para um grupo
 
-        # add aliase for the kind of user management commands
-        # Cmnd alias specification
+# add aliase for the kind of user management commands
+# Cmnd alias specification
         Cmnd_Alias USERMGR = /usr/sbin/adduser, /usr/sbin/useradd, /usr/sbin/newusers, \
         /usr/sbin/deluser, /usr/sbin/userdel, /usr/sbin/usermod, /usr/bin/passwd
 
-        # add to the end
+# add to the end
         %usermgr   ALL=(ALL:ALL) USERMGR
 
         root@dlp:~# groupadd usermgr
         root@dlp:~# usermod -aG usermgr buster
-        # verify with user [buster]
+# verify with user [buster]
         buster@dlp:~$ sudo /usr/sbin/useradd testuser
         buster@dlp:~$
         buster@dlp:~$ sudo /usr/bin/passwd testuser
@@ -81,7 +81,7 @@
                             /usr/sbin/deluser, /usr/sbin/userdel, /usr/sbin/usermod, /usr/bin/passwd
         ubuntu   ALL=(ALL:ALL) /usr/bin/vim
 
-        # verify with user [fedora]
+# verify with user [fedora]
         fedora@dlp:~$ sudo /usr/sbin/visudo
         
         # possible open and edit
@@ -89,14 +89,14 @@
         ## the root user, without needing the root password.
         ##
 
-        # verify with user [cent]
+# verify with user [cent]
         cent@dlp:~$ sudo /usr/sbin/userdel -r testuser
         cent@dlp:~$     # possible execute
         
-        # verify with user [ubuntu]
+# verify with user [ubuntu]
         ubuntu@dlp:~$ sudo /usr/bin/vim /root/.profile
        
-        # possible open and edit
+# possible open and edit
         # ~/.profile: executed by Bourne-compatible login shells.
 
 # LOGS
@@ -105,12 +105,12 @@
         Manter somente os logs de sudo separado:
 
 
-        # add to the end
+# add to the end
         Defaults syslog=local1
         
         root@dlp:~# vi /etc/rsyslog.conf
         
-        # line 61: add
+# line 61: add
         local1.*                        /var/log/sudo.log
         auth,authpriv.*;local1.none     /var/log/auth.log
 

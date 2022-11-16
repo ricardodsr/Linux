@@ -2,41 +2,41 @@
 
             root@dlp:~# vi /etc/network/interfaces
             
-            # This file describes the network interfaces available on your system
-            # and how to activate them.
+# This file describes the network interfaces available on your system
+# and how to activate them.
 
             source /etc/network/interfaces.d/*
 
-            # The loopback network interface
+# The loopback network interface
             
             auto lo
             iface lo inet loopback
 
-            # The primary network interface
+# The primary network interface
             allow-hotplug ens2
             
-            # comment out
-            #iface ens2 inet dhcp
+# comment out
+    #iface ens2 inet dhcp
 
-            # add static settings
+# add static settings
             iface ens2 inet static
             
-            # IP address
+# IP address
             address 10.0.0.30
             
-            # network address
+# network address
             network 10.0.0.0
             
-            # subnet mask
+# subnet mask
             netmask 255.255.255.0
             
-            # broadcast address
+# broadcast address
             broadcast 10.0.0.255
             
-            # default gateway
+# default gateway
             gateway 10.0.0.1
             
-            # name server
+# name server
             dns-nameservers 10.0.0.10
 
             root@dlp:~# systemctl restart networking ifup@ens2

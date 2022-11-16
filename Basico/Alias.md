@@ -2,8 +2,8 @@
 
         root@dlp:~# vi /etc/profile.d/command_alias.sh
         
-        # create new file
-        # add alias you'd like to set
+# create new file
+# add alias you'd like to set
         
         alias ll='ls $LS_OPTIONS -l'
         alias l='ls $LS_OPTIONS -lA'
@@ -12,14 +12,14 @@
         alias mv='mv -i'
         
         
-        # reload
+# reload
         root@dlp:~# source /etc/profile.d/command_alias.sh
 
 # Aplicar os alias a um utilizador
 
         buster@dlp:~$ vi ~/.bashrc
 
-        # add to the end : add alias you'd like to set
+# add to the end : add alias you'd like to set
         
         alias ll='ls $LS_OPTIONS -l'
         alias l='ls $LS_OPTIONS -lA'
