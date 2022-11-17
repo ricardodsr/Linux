@@ -4,7 +4,6 @@
         Desde então, esse hobby se tornou o sistema operacional com a maior base de usuários, o mais usado em servidores da Internet disponíveis ao público e o único usado nos 500 supercomputadores mais rápidos do mundo.
 
 # Principais distribuições
-
         Debian          (Server/User)              Fedora (ligada à Red Hat);
         Linux Mint      (User)                     CentOS (com foco em servidores);
         Arch Linux      (User)                     Kali (Ethical-Hacking)
